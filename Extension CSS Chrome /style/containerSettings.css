@@ -1,0 +1,68 @@
+#CSS_panel {
+    border: 2px solid  rgb(67, 10, 19) !important;
+    position: fixed !important;
+    border-radius: 5px !important;
+    min-width: 10% !important;
+    max-width: 100% !important;
+    min-height: 10% !important;
+    max-height: 100% !important;
+    background:  #e6f2ff !important;
+    z-index: 999999999 !important;
+
+}
+
+#CSS_panel_button_group {
+    display	: table !important;
+    float: right !important;
+}
+
+#CSS_panel_button_group div {
+    display: table-cell !important;
+    vertical-align: middle !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.CSS_panel_position_top {
+    top: 0 !important;
+}
+
+.CSS_panel_position_right {
+    right: 10px !important;
+}
+
+.CSS_panel_position_left {
+    left: 10px !important;
+}
+
+.CSS_panel_position_bottom {
+    bottom: 0 !important;
+}
+
+#CSS_panel_all {
+    padding: 10px !important;
+}
+
+.noLinkCSSextensions {
+    pointer-events: none !important;
+}
+
+#CSS_panel_Change_Field {
+    display: none ;
+}
+.CSS_panel_Name {
+    color: #1f1f2e !important;
+    font-size: 12px !important;
+    font-family: "Al Bayan" !important;
+}
+
+.CSS_field_style {
+    text-shadow: none !important;
+    font-size: 10px !important;
+    border: 1px solid #8d8b81 !important;
+    border-radius: 3px !important;
+    background:   #ffffff !important;
+    font-family: Chalkboard;
+    padding: 5px !important;
+    resize: both !important;
+}

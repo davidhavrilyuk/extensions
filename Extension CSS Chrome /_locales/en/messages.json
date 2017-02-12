@@ -1,0 +1,12 @@
+{
+  "ResolutionSettings": {"message": "Resolution settings!", "description": "Resolution settings" },
+  "optionsNo": {"message": "No", "description": "no" },
+  "optionsYes": {"message": "Yes", "description": "yes" },
+  "optionsSaveButton": {"message": "Save", "description": "saves settings when clicking" },
+  "optionLoadLabel": {"message": "Activate saved css when page load:", "description": " Description second fieldset" },
+  "optionsSaveLabel": {"message": "Save  css before you restart or shutdown Windows:", "description": "Description first fieldset" },
+  "MessageLinksDis": {"message": "links disabled!", "description": "this is the second extension method" },
+  "titleAddStyle": {"message": "Add Style", "description":"this is the first extension method" },
+  "titleReplaceStyle": {"message": "Replace Style", "description":"This is  title  method second expansion interface" },
+  "errorChromeURL": { "message": "Extension does not work on the Chrome Extensions page. You should try it on a regular website.", "description": "Error message shown to a user when trying to use the extension on a chrome:// URL." }
+}

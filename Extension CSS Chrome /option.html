@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/option.css" rel="stylesheet">
+    <script src="js/option.js"></script>
+</head>
+<body>
+<header>
+    <h2 data-message=ResolutionSettings>Resolution settings</h2>
+</header>
+<div id="wrap">
+    <fieldset>
+        <p data-message="optionsSaveLabel">Save  css before you restart or shutdown Windows:</p>
+        <input type="radio" name="save" id="save-yes"> <label for="save-yes" data-message="optionsYes">Yes</label>
+        <input type="radio" name="save" id="save-no"> <label for="save-no" data-message="optionsNo">No</label>
+    </fieldset>
+    <fieldset>
+        <p data-message="optionLoadLabel">Activate saved css when page load:</p>
+        <input type="radio" name="activate" id="activate-yes"> <label for="activate-yes" data-message="optionsYes">Yes</label>
+        <input type="radio" name="activate" id="activate-no"> <label for="activate-no" data-message="optionsNo">No</label>
+    </fieldset>
+    <fieldset>
+        <p><button id="save-button" data-message="optionsSaveButton">Save</button></p>
+    </fieldset>
+</div>
+</body>
+</html>

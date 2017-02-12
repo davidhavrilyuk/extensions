@@ -1,0 +1,12 @@
+{
+  "ResolutionSettings": {"message": "Настройки расширение!", "description": "Настройки расширение" },
+  "optionsNo": {"message": "Нет", "description": "нет" },
+  "optionsYes": {"message": "Да", "description": "да" },
+  "optionsSaveButton": {"message": "Сохранить", "description": "Сохраняет настройки при клике " },
+  "optionLoadLabel": {"message": "Активировать сохраненный сss при загрузки страницы", "description": "Описания второго fieldset " },
+  "optionsSaveLabel": {"message": "Сохранять СSS при закрытие страницы", "description": "Описания первого fieldset" },
+  "MessageLinksDis": {"message": "Ссылки отключена!", "description": "это сообщение оповещает об отключение ссылки" },
+  "titleAddStyle": {"message": "Добавить стиль", "description":"Это название первого метода расширение " },
+  "titleReplaceStyle": {"message": "Заменить стиль", "description":"Это названия второго метода расширение" },
+  "errorChromeURL": { "message": "Pасширение не может работать на этой странице.  Вы должны зайти на Веб-сайт", "description": "Сообщение об ошибке отображается для пользователя, когда пытаюсь использовать расширение на chrome:// URL." }
+}
