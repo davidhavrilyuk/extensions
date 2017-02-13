@@ -8,11 +8,13 @@ var сssExt = function (options) {
         styleElement = [],
         cacheCSSReplace = [];
 
-    function StyleElemReplace(x, y) {
+    function StyleElemReplace(x, y, elem, offsetLeft, offsetTop) {
         var self = this;
         this.x = x;
         this.y = y;
-        this.element = document.elementFromPoint(this.x, this.y);
+        this.element = elem;
+        this.offsetTop = offsetTop;
+        this.offsetLeft = offsetLeft;
         this.style = [];
         this.attr = 'classExtUrl' + cacheCSSReplace.length
     }
@@ -251,8 +253,8 @@ var сssExt = function (options) {
         if (getElID('CSS_select_option') != undefined) {
             getElID('CSS_option').removeChild(getElID('CSS_select_option'))
         }
-        var styleElemReplace = new StyleElemReplace(e.clientX, e.clientY);
-        var elem = document.elementFromPoint(e.clientX, e.clientY),
+        var elem = document.elementFromPoint(e.clientX, e.clientY);
+        var styleElemReplace = new StyleElemReplace(e.clientX, e.clientY, elem, pageXOffset, pageYOffset),
             styleElem = window.getComputedStyle(elem),
             styleElemArr =  styleElem.cssText.split(';');
         styleElement = filterStyleArr(styleElemArr);

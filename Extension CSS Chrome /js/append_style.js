@@ -45,10 +45,12 @@
         styleElem.id = 'Style_CSS_replace';
         for (var i = 0; i < replaceCSS.length; ++i) {
             var   cacheCSSRe = replaceCSS[i];
+            window.scrollTo(cacheCSSRe.offsetLeft, cacheCSSRe.offsetTop);
             var el = document.elementFromPoint(cacheCSSRe.x, cacheCSSRe.y);
             removeClass(el, cacheCSSRe.attr);
             addClass(el, cacheCSSRe.attr);
-            CSS += '.' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '}'
+            CSS += '.' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '}';
+            window.scrollTo(0, 0);
         }
         styleElem.innerHTML = CSS;
         document.head.appendChild(styleElem)

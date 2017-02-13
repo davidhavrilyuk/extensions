@@ -1,9 +1,9 @@
 (function () {
      var urlKey = document.location,
-         key = "styles",
-         css = window.localStorage.getItem('extensionСSS-' + key + '-' + urlKey);
+         css = window.localStorage.getItem('extensionСSS-styles-' + urlKey),
+         replaceCSS = JSON.parse(window.localStorage.getItem('extensionСSS-replaceCSS-' +urlKey));
 
-         if (css && css !=='') {
+         if ((css && css !=='') || replaceCSS) {
              chrome.extension.sendMessage({modify: true}, function (response) {});
          }
 }());
