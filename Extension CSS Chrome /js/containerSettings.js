@@ -198,10 +198,12 @@ var сssExt = function (options) {
         var el = getElID('CSS_panel_Change_Field');
         if (getElID("CSS_panel_Checkbox") && getElID("CSS_panel_Checkbox").checked) {
             el.style.display = "block";
+            disableButtons();
             disableLinks();
             addEventListener('dblclick', handler, false)
         } else {
             includeLinks();
+            includeButtons();
             el.style.display = "none";
             removeEventListener('dblclick', handler, false)
         }
@@ -229,6 +231,31 @@ var сssExt = function (options) {
         }
 
         styleElem.innerHTML = CSS
+    }
+
+    function disableButtons() {
+        var submit = document.querySelectorAll('input[type=submit]'),
+            buttons1 = document.querySelectorAll('input[type=button]'),
+            buttons2 = document.querySelectorAll('button');
+        buttons1 = Array.prototype.slice.call(buttons1);
+        buttons2 = Array.prototype.slice.call(buttons2);
+        submit = Array.prototype.slice.call(submit);
+        var buttons = buttons1.concat(buttons2, submit);
+        buttons.forEach(function (item, index, arr) {
+            if (!item.disabled) {
+                addClass(item, 'buttonClassNameCSSExtension');
+                item.disabled = true
+            }
+        })
+    }
+
+    function includeButtons() {
+        var buttons = document.querySelectorAll('.buttonClassNameCSSExtension');
+        buttons = Array.prototype.slice.call(buttons);
+        buttons.forEach(function (item, index, arr) {
+            item.disabled = false;
+            removeClass(item, 'buttonClassNameCSSExtension')
+        })
     }
     
     function disableLinks() {
