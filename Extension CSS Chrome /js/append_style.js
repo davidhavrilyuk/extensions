@@ -10,31 +10,10 @@
             document.head.appendChild(elemStyle)
         }
 
-
-
-    function hasClass(el, name) {
-        return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
-    }
-
-    function addClass(el, name) {
-        if (!hasClass(el, name)) {
-            el.className += (el.className ? ' ' : '') +name;
-        }
-    }
-
-    function removeClass(el, name) {
-        if (hasClass(el, name)) {
-            var newName = el.className;
-            newName = newName.replace(new RegExp('(\\s|^)'+name+'(\\s|$)'),' ');
-            newName = newName.replace(/^\s+|\s+$/g, '');
-            el.className = newName;
-        }
-    }
-
     function allValStyles(arrStyle) {
         var val = '';
         for (var i = 0; i < arrStyle.length; ++i) {
-            val += arrStyle[i][0] + ":" + arrStyle[i][1] + ";"
+            val += arrStyle[i][0] + ":" + arrStyle[i][1] + "; "
         }
         return val
     }
@@ -47,9 +26,8 @@
             var   cacheCSSRe = replaceCSS[i];
             window.scrollTo(cacheCSSRe.offsetLeft, cacheCSSRe.offsetTop);
             var el = document.elementFromPoint(cacheCSSRe.x, cacheCSSRe.y);
-            removeClass(el, cacheCSSRe.attr);
-            addClass(el, cacheCSSRe.attr);
-            CSS += '.' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '}';
+            el.id = cacheCSSRe.attr;
+            CSS += '#' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '} ';
             window.scrollTo(0, 0);
         }
         styleElem.innerHTML = CSS;

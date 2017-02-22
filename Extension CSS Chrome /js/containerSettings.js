@@ -16,7 +16,7 @@ var сssExt = function (options) {
         this.offsetTop = offsetTop;
         this.offsetLeft = offsetLeft;
         this.style = [];
-        this.attr = 'classExtUrl' + cacheCSSReplace.length
+        this.attr = this.element.id || 'classExtUrl' + cacheCSSReplace.length
     }
 
     StyleElemReplace.prototype.newStyle = function (NameStyle, newStyleValue, oldStyleValue ) {
@@ -212,7 +212,7 @@ var сssExt = function (options) {
     function allValStyles(arrStyle) {
         var val = '';
         for (var i = 0; i < arrStyle.length; ++i) {
-            val += arrStyle[i][0] + ":" + arrStyle[i][1] + ";"
+            val += arrStyle[i][0] + ":" + arrStyle[i][1] + "; "
         }
         return val
     }
@@ -225,9 +225,8 @@ var сssExt = function (options) {
         for (var i = 0; i < cacheCSSReplace.length; ++i) {
          var   cacheCSSRe = cacheCSSReplace[i];
             var el = document.elementFromPoint(cacheCSSRe.x, cacheCSSRe.y);
-            removeClass(el, cacheCSSRe.attr);
-            addClass(el, cacheCSSRe.attr);
-          CSS += '.' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '}'
+             el.id = cacheCSSRe.attr;
+          CSS += '#' + cacheCSSRe.attr + '{' + allValStyles(cacheCSSRe.style) + '} '
         }
 
         styleElem.innerHTML = CSS
