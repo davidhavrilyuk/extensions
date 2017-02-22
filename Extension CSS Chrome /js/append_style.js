@@ -37,5 +37,4 @@
     if (replaceCSS != undefined) {
         renderCSSReplace()
     }
-
 }());

@@ -30,12 +30,12 @@ var сssExt = function (options) {
                          break;
                      }
                  }
+
             if (lack) {
                 this.style.push([NameStyle, newStyleValue])
             }
         }
     };
-
 
     // Utility Functions
     function hasClass(el, name) {
@@ -66,7 +66,6 @@ var сssExt = function (options) {
     function getElID(id) {
         return document.getElementById(id)
     }
-
 
     function getStorage(key) {
             return window.localStorage.getItem('extensionСSS-' + key + '-' + urlKey);
@@ -193,7 +192,6 @@ var сssExt = function (options) {
     }
 
 ///// panel + box to change styles
-
     function CSSpanel() {
         var el = getElID('CSS_panel_Change_Field');
         if (getElID("CSS_panel_Checkbox") && getElID("CSS_panel_Checkbox").checked) {
@@ -300,8 +298,7 @@ var сssExt = function (options) {
         }
 
     }
-    
-    
+
      function replaceCSS(styleElemReplace) {
          var nameCSS = getElID('CSS_select_option').value,
              NewValueCSS = getElID('CSS_code_Change').value,
@@ -397,7 +394,6 @@ var сssExt = function (options) {
     }
 
 ////init
-
     function init() {
         addpanel();
         contentPanelText();
