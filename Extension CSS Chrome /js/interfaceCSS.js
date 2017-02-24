@@ -285,7 +285,6 @@ var сssExt = function (options) {
                 } catch (ignor) {}
                 setStorage('replaceCSS', JSON.stringify(self.cacheCSSReplace))
             }, 100);
-            console.log(self.cacheCSSReplace)
         }
     };
 
@@ -420,5 +419,4 @@ var сssExt = function (options) {
     } else {
         document.body.removeChild(getElID('CSS_panel'));
     }
-
 };
