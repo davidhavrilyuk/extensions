@@ -1,7 +1,7 @@
 var сssExt = function (options) {
     var urlKey = document.location;
 
-    // Utility Functions
+    // Used Functions
     function hasClass(el, name) {
         return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
     }
