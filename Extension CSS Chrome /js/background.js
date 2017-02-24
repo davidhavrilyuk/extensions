@@ -34,7 +34,7 @@
         var code = 'сssExt('+ JSON.stringify(options) +')';
 
         chrome.tabs.insertCSS(null, {file: "style/containerSettings.css"});
-        chrome.tabs.executeScript(null, {file: "js/containerSettings.js"}, function () {
+        chrome.tabs.executeScript(null, {file: "js/interfaceCSS.js"}, function () {
             chrome.tabs.executeScript(null, {code: code});
         });
 
